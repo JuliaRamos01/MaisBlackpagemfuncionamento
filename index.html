@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- código css do css -->
+  <link rel="stylesheet" href="../CSS/style.css">
+
+  <!-- CÓDIGO FONTE OPEN SANS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <!-- CÓDIGO FONTE OPEN SANS BOLD 700 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=PT+Sans:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- CÓDIGO FONTE Source Sans Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=PT+Sans:wght@700&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet">
+
+  <!-- CÓDIGO FONTE PT SANS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CÓDIGO FONTE LORA -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+
+
+  <!-- título -->
+  <title>+Black</title>
+
+</head>
+
+<body>
+  <!-- PARTE DA NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#000000;">
+    <div class="container">
+      <a class="nav-link" href="./index.html"><img width="120em" src="../imagens/logo.png" alt="nosso logo"></a>
+      <!-- PARTE DA LOGO -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li><!-- Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="./nossosservicos.html">Nossos serviços</a>
+          </li><!-- Nossos serviços -->
+          <li class="nav-item">
+            <a class="nav-link" href="./quemsomos.html">Quem somos</a>
+          </li><!-- Quem somos -->
+          <li class="nav-item">
+            <a class="nav-link" href="./contato.html">Contato</a>
+          </li><!-- Contato -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CHATBOX -->
+  <div class="chat-box">
+    <div>
+      <div class="client">
+        <img src="../imagens/imgchatbox.png" alt="avatar" />
+        <div class="client-info">
+          <h5>Tire aqui as suas dúvidas!</h5>
+        </div>
+      </div>
+
+      <div class="site-chat"><!-- chat -->
+        <label>Bem-vindo(a) ao nosso site! Aqui neste chat você pode tirar as suas dúvidas. Em que posso
+          ajudar?
+          Digite uma das opções abaixo:<br>
+          <ul>
+            <li>Cartão</li>
+            <li>Cadastro</li>
+            <li>Aplicativo</li>
+            <li>Outra dúvida</li>
+          </ul>
+        </label>
+      </div>
+
+      <div class="client-chat" id="escolhas-cartao">
+        <button onclick="exibeCartao()" id="escolha-cartao">Como conseguir o cartão?</button>
+        <button onclick="exibeOutra()" id="escolha-outra-cart">Outra dúvida</button>
+      </div>
+
+      <div class="site-chat" id="resp-cartao">
+        <p>O cartão deve ser solicitado através do aplicativo e requer que seja feito o cadastro da
+          conta previamente.</p>
+        <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+      </div>
+
+      <div class="client-chat" id="escolhas-cadastro">
+        <button onclick="exibeCadastro()" id="escolha-cadastro">Como me cadastrar? </button>
+        <button onclick="exibeOutra()" id="escolha-outra-cad">Outra dúvida</button>
+      </div>
+
+      <div class="site-chat" id="resp-cadastro">
+        <p>O cadastro deve ser realizado apenas pelo aplicativo. Não é possível realizá-lo pelo
+          site.</p>
+        <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+      </div>
+
+      <div class="client-chat" id="escolhas-app">
+        <button onclick="exibeApp()" id="escolha-app"> Onde posso encontrar o aplicativo? </button>
+        <button onclick="exibeOutra()" id="escolha-outra-app">Outra dúvida</button>
+      </div>
+
+      <div class="site-chat" id="resp-app">
+        <p>Ele pode ser baixado através da loja de aplicativos do seu celular. Consulte a nossa página
+          “Nossos serviços” e clique no botão “Baixe já” no fim da página, que você será redirecionado.
+        </p>
+        <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+      </div>
+
+      <div class="site-chat" id="escolha-outra">
+        <p id="resp-outra">Você pode nos enviar um e-mail para tirar dúvidas de outros assuntos. Visite a
+          nossa
+          página de contato e nos mande a sua mensagem, retornaremos o mais breve possível!</p>
+      </div>
+
+      <div class="site-chat" id="erro">
+        <p>Não entendi. Por favor, digite uma opção válida</p>
+        <button onclick="outraDuvida()" class="outra-duvida">Tentar novamente</button>
+      </div>
+
+      <div class="client-chat" id="duvidas2">
+        <button onclick="exibeCartao()" id="escolha-cartao2">Como conseguir o cartão?</button>
+        <button onclick="exibeCadastro()" id="escolha-cadastro2">Como me cadastrar? </button>
+        <button onclick="exibeApp()" id="escolha-app2"> Onde posso encontrar o aplicativo? </button>
+        <button onclick="exibeOutra()" id="escolha-outra2">Outro tipo de dúvida</button>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" id="campo" placeholder="Digite aqui..." />
+        <input id=enviar onclick="exibe()" type="submit" />
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-btn">
+    <i class="far fa-comment-dots"  onclick="changeIcon(this)"></i>
+  </div>
+
+  <!-- PARTE DA IMAGEM-CABEÇALHO -->
+  <header class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark" style="min-height: 100vh; background-size: cover;">
+    <div class="container">
+      <div class="row align-items-center d-flex justify-content-between">
+        <div class="col-12 col-md-6 pb-5 order-2 order-sm-2">
+          <h1 class="  text-white font-weight-bold mb-3 mt-5 display-3">O <span style="color:#000000;">Poder</span>
+            está
+            <br>em você!
+          </h1>
+          <p>Ao ter seu próprio negócio, você pode ser<br>o autor da história de seu próprio sucesso!</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- PARTE EXPLICATIVA -->
+
+  <div class="exp-section1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 how-img">
+          <img src="../imagens/ilustracao2.png" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-6">
+          <h4>A jornada é longa, mas vale a caminhada! </h4>
+          <h4 class="subheading">No <span style="color:#000000;">+Black</span>, você encontra mecanismos para trilhar
+            a
+            sua jornada
+            rumo ao sucesso.
+          </h4>
+          <p>Com um time qualificado e preparado para lidar
+            com os mais diversos cenários, o <b>+Black</b>
+            oferece diversos serviços para auxiliá-lo em sua jornada de empreendedorismo.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Sem enrolação, sem dor de cabeça e sem papo furado!</h5>
+            <h5 class="subheading">No <span style="color:#000000;">+Black</span>, acreditamos que simplicidade
+              é tudo! </h5>
+            <p>Transformar um conteúdo complexo em algo que possa ser
+              facilmente compreendido e utilizado é uma das nossas missões. Não é porque o assunto
+              é sério que ele deve ser incompreensível, não é verdade?
+            </p>
+          </div>
+          <div class="col-md-6 how-img">
+            <img src="../imagens/ilustracao3.png" class="img-fluid" alt="" />
+          </div>
+        </div><!-- PARTE EXPLICATIVA -->
+      </div>
+    </div>
+  </div>
+  <!-- PARTE COM ICONES E TEXTO -->
+
+  <section class="py-5 text-center">
+    <div class="container">
+      <h1 class="text-center">Ok, mas como vou obter vantagem?</h1>
+      <h2 class="text-white mb-5 text-center">Oferecemos muitas formas de você lucrar com o seu negócio sem
+        queimar
+        seus neurônios!
+        <br> Basicamente, prezamos pelo desenvolvimento de três etapas:
+      </h2>
+
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-shop"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+          </svg>
+          <h6>Conhecer</h6>
+          <p class="text-white">Faremos um diagnóstico personalizado <br> das suas reais necessidades.</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-coin"
+            viewBox="0 0 16 16">
+            <path
+              d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z" />
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+          </svg>
+          <h6>Investir</h6>
+          <p class="text-white">Após o diagnóstico, você poderá ter acesso
+            às funcionalidades que o +Black tem a oferecer.
+          </p>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-emoji-smile"
+            viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+              d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
+          </svg>
+          <h6>Realizar</h6>
+          <p class="text-white"> Produzir clientes satisfeitos e negócios <br> prósperos é o nosso objetivo!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- PARTE COM IMAGEM E CTA-->
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+      <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="../imagens/imagem2.jpg" alt="..." />
+      </div>
+      <div class="col-lg-5">
+        <h1 class="fontecta">Seja um cliente do <span style="color: #40E0D0;">+Black</span></h1>
+        <p>E aí? Gostou?
+          <br>
+          Que tal fazer parte do nosso time de clientes e mudar positivamente a sua história empreendedora?
+        </p>
+        <a class="btn" href="FAZERRRR">Quero participar!</a>
+      </div>
+    </div>
+  </div><!-- FECHA IMAGEM E CTA -->
+
+  <!-- botao voltar ao topo -->
+
+  <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+    data-abc="true"></a>
+
+  <!-- FOOTER-->
+  <footer class="footer">
+    <div class="container bottom_border">
+      <div class="row">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+          <div class="container">
+            <a class="nav-link" href="./index.html"><img class="logobaixo" width="140em" src="../imagens/logo.png"
+                alt="nosso logo"></a>
+            <ul class="foote_bottom_ul_amrc">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./nossosservicos.html">Nossos serviços</a></li>
+              <li><a href="./quemsomos.html">Quem somos</a></li>
+              <li><a href="./contato.html">Contato</a></li>
+            </ul>
+            <ul class="social_footer_ul"><!-- links -->
+              <li><a href="https://github.com/JuliaRamos01/EtapasFinais_MaisBlack"><i class="fab fa-github"></i></a></li>
+              <li><a href="www.instagram.com/eusoumaisblack/"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fechamento footer -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- PARTE DE ÍCONES - FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/7d235f40dc.js" crossorigin="anonymous"></script>
+
+  <!-- código do script do chatbox -->
+  <script src="../Javascript/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Código acessibilidade -->
+  <script>(function (d) {
+      var s = d.createElement("script"); s.setAttribute("data-account", "cfuyg20MEz"); s.
+        setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s);
+    })
+      (document)</script><noscript>Please ensure Javascript is enabled for purposes of <a
+      href="https://userway.org">website
+      accessibility</a></noscript>
+</body>
+
+</html>

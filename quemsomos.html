@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- código css do css -->
+    <link rel="stylesheet" href="../CSS/quemsomos.css">
+
+    <!-- CÓDIGO FONTE OPEN SANS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- CÓDIGO FONTE OPEN SANS BOLD 700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=PT+Sans:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- CÓDIGO FONTE Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=PT+Sans:wght@700&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+
+    <!-- CÓDIGO FONTE PT SANS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CÓDIGO FONTE LORA -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <!-- título -->
+    <title>Quem somos</title>
+
+</head>
+
+<body>
+    <!-- PARTE DA NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#000000;">
+        <div class="container">
+            <a class="nav-link" href="./index.html"><img width="120em" src="../imagens/logo.png" alt="nosso logo"></a>
+            <!-- PARTE DA LOGO -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li><!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nossosservicos.html">Nossos serviços</a>
+                    </li><!-- Nossos serviços -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./quem-somos.html">Quem somos</a>
+                    </li><!-- Quem somos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contato.html">Contato</a>
+                    </li><!-- Contato -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CHATBOX -->
+    <div class="chat-box">
+        <div>
+            <div class="client">
+                <img src="../imagens/imgchatbox.png" alt="avatar" />
+                <div class="client-info">
+                    <h5>Tire aqui as suas dúvidas!</h5>
+                </div>
+            </div>
+
+            <div class="site-chat"><!-- chat -->
+                <label>Bem-vindo(a) ao nosso site! Aqui neste chat você pode tirar as suas dúvidas. Em que posso
+                    ajudar?
+                    Digite uma das opções abaixo:<br>
+                    <ul>
+                        <li>Cartão</li>
+                        <li>Cadastro</li>
+                        <li>Aplicativo</li>
+                        <li>Outra dúvida</li>
+                    </ul>
+                </label>
+            </div>
+
+            <div class="client-chat" id="escolhas-cartao">
+                <button onclick="exibeCartao()" id="escolha-cartao">Como conseguir o cartão?</button>
+                <button onclick="exibeOutra()" id="escolha-outra-cart">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-cartao">
+                <p>O cartão deve ser solicitado através do aplicativo e requer que seja feito o cadastro da
+                    conta previamente.</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="client-chat" id="escolhas-cadastro">
+                <button onclick="exibeCadastro()" id="escolha-cadastro">Como me cadastrar? </button>
+                <button onclick="exibeOutra()" id="escolha-outra-cad">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-cadastro">
+                <p>O cadastro deve ser realizado apenas pelo aplicativo. Não é possível realizá-lo pelo
+                    site.</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="client-chat" id="escolhas-app">
+                <button onclick="exibeApp()" id="escolha-app"> Onde posso encontrar o aplicativo? </button>
+                <button onclick="exibeOutra()" id="escolha-outra-app">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-app">
+                <p>Ele pode ser baixado através da loja de aplicativos do seu celular. Consulte a nossa página
+                    “Nossos serviços” e clique no botão “Baixe já” no fim da página, que você será redirecionado.
+                </p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="escolha-outra">
+                <p id="resp-outra">Você pode nos enviar um e-mail para tirar dúvidas de outros assuntos. Visite a
+                    nossa
+                    página de contato e nos mande a sua mensagem, retornaremos o mais breve possível!</p>
+            </div>
+
+            <div class="site-chat" id="erro">
+                <p>Não entendi. Por favor, digite uma opção válida</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Tentar novamente</button>
+            </div>
+
+            <div class="client-chat" id="duvidas2">
+                <button onclick="exibeCartao()" id="escolha-cartao2">Como conseguir o cartão?</button>
+                <button onclick="exibeCadastro()" id="escolha-cadastro2">Como me cadastrar? </button>
+                <button onclick="exibeApp()" id="escolha-app2"> Onde posso encontrar o aplicativo? </button>
+                <button onclick="exibeOutra()" id="escolha-outra2">Outro tipo de dúvida</button>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="campo" placeholder="Digite aqui..." />
+                <input id=enviar onclick="exibe()" type="submit" />
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-btn">
+        <i class="far fa-comment-dots"  onclick="changeIcon(this)"></i>
+    </div>
+
+    <!--IMAGEM -->
+    <header class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark" style="min-height: 100vh; background-size: cover;">
+        <div class="container">
+            <div class="row align-items-center d-flex justify-content-between">
+                <div class="col-12 col-md-6 pb-5 order-2 order-sm-2 ">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- QUEM SOMOS -->
+    <div>
+        <div id="about-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="main-title">Sobre a +Black</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="../imagens/Apresentação quem somos.jpeg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="about-title">Qual o nosso propósito?</h3>
+                        <p>O <b>+Black</b> é uma proposta de fin-tech voltada para o público
+                            negro, que busca oferecer benefícios para alavancar os
+                            negócios de pessoas negras,
+                            através da
+                            proposta elucidada pelo programa Recode Pro. Através da concessão de créditos/empréstimos de
+                            forma
+                            facilitada/sem burocracia, mentoria financeira com uma linguagem acessível e indicação
+                            de
+                            empreendimentos de pessoas negras, o +Black visa romper as barreiras impostas pela
+                            desigualdade
+                            racial e abrir caminhos para que potenciais talentos da comunidade negra possam ocupar
+                            áreas de
+                            destaque financeiro, ao expandir e fortalecer seus negócios.</p>
+                        <p>
+                            Além disso, somos um negócio social que visa a justiça econômica, atuando no fomento do
+                            empreendedorismo e da inovação para população afrobrasileira.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Você sabia -->
+    <section class="services-area">
+        <div id="services-area ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center text-white"> Você Sabia?</h3>
+                        <h4 class="text-center text-white">A população negra no Brasil corresponde a:
+                        </h4>
+                        <br>
+                    </div>
+
+                    <div class="col-md-4 service-box">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <h5>54% da população brasileira</h5>
+                        <a class="btn btn-primary"
+                            href="https://jornal.usp.br/radio-usp/dados-do-ibge-mostram-que-54-da-populacao-brasileira-e-negra/"
+                            target="_blank" role="button">Saiba mais</a>
+                    </div>
+                    <div class="col-md-4 service-box">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <h5>51% dos empreendedores</h5>
+                        <a class="btn btn-primary"
+                            href="https://jovempan.com.br/programas/jornal-da-manha/51-dos-empreendedores-brasileiros-sao-negros-e-geram-renda-de-r-73-bilhoes.html"
+                            target="_blank" role="button">Saiba mais</a>
+                    </div>
+                    <div class="col-md-4 service-box">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <h5>Consomem 1.7 trilhão ao ano</h5>
+                        <a class="btn btn-primary"
+                            href="https://blogs.correiobraziliense.com.br/servidor/populacao-negra-movimenta-r-17-trilhao-no-brasil-revela-pesquisa-do-instituto-locomotiva/"
+                            target="_blank" role="button">Saiba mais </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- slider Missão , Visão , Valores -->
+    <div class="container-fluid">
+        <div id="mainSlider" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+                <li data-target="#mainSlider" data-slide-to="1"></li>
+                <li data-target="#mainSlider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../imagens/carrossel1.png" class="d-block w-100" alt="Missão">
+
+                    <!-- tirar classe d-none -->
+
+                    <div class="carousel-caption d-md-block">
+                        <h2> Missão</h5>
+                            <p>Atribuir maiores oportunidades à comunidade negra.</p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../imagens/carrossel2.png" class="d-block w-100" alt=" Visão">
+                    <div class="carousel-caption d-md-block">
+                        <h2>Visão</h5>
+                            <p>Ajudar empreendedores negros a trilharem uma carreira de sucesso.
+                            </p>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../imagens/carrossel3.png" class="d-block w-100" alt="Valores">
+                    <div class="carousel-caption d-md-block">
+                        <h2> Valores</h5>
+                            <p>Igualdade, União, Força, Justiça, Integração.</p>
+
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Nosso time -->
+    <div class="team-area sp">
+        <div class="container">
+            <div class="row justify-content-center mb-4 textos">
+                <div class="col-md-7 text-center">
+                    <h3 class="mb-3">Nosso time</h3>
+                </div>
+            </div> <!-- depois aprimorar o css daqui -->
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3 single-team">
+                    <div class="inner">
+                        <div class="team-img">
+                            <img src="../imagens/Andersonperfil.png" alt="Member Photo">
+                        </div>
+                        <div class="team-content">
+                            <h4>Anderson Silva</h4>
+                            <h5>Full Stack Developer</h5>
+                            <div class="team-social">
+                                <a href="https://www.linkedin.com/in/anderson-silva-470265183/"
+                                    class="fab fa-linkedin"></a>
+                                <a href="https://github.com/AndersonSilvah" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 single-team">
+                    <div class="inner">
+                        <div class="team-img">
+                            <img src="../imagens/Arianiperfil.png" alt="Member Photo">
+                        </div>
+                        <div class="team-content">
+                            <h4>Ariani Nascimento</h4>
+                            <h5>Full Stack Developer</h5>
+                            <div class="team-social">
+                                <a href="https://www.linkedin.com/in/ariani-nascimento" class="fab fa-linkedin"></a>
+                                <a href="https://github.com/ArianiNascimento" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 single-team">
+                    <div class="inner">
+                        <div class="team-img">
+                            <img src="../imagens/Erick.png" alt="Member Photo">
+                        </div>
+                        <div class="team-content">
+                            <h4>Erick Gomes</h4>
+                            <h5>Full Stack Developer</h5>
+                            <div class="team-social">
+                                <a href="https://www.linkedin.com/in/ariani-nascimento" class="fab fa-linkedin"></a>
+                                <a href="https://github.com/ErickGomes2805" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 single-team">
+                    <div class="inner">
+                        <div class="team-img">
+                            <img src="../imagens/Jeanperfil.png" alt="Member Photo">
+                        </div>
+                        <div class="team-content">
+                            <h4>Jean Jesus</h4>
+                            <h5>Full Stack Developer</h5>
+                            <div class="team-social">
+                                <a href="https://www.linkedin.com/in/jean-jesus-86475a59/" class="fab fa-linkedin"></a>
+                                <a href="https://github.com/JeanNewb" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 single-team">
+                    <div class="inner">
+                        <div class="team-img">
+                            <img src="../imagens/Juliaperfil.png" alt="Member Photo">
+                        </div>
+                        <div class="team-content">
+                            <h4>Júlia Ramos</h4>
+                            <h5>Full Stack Developer</h5>
+                            <div class="team-social">
+                                <a href="https://www.linkedin.com/in/julia-ramos-908" class="fab fa-linkedin"></a>
+                                <a href="https://github.com/JuliaRamos01" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linha Do Tempo-->
+
+    <div class="time-line">
+        <div class="container">
+            <h3 class="main-title"> Retrospectiva Do Projeto +Black</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline4">
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">Outubro</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Brainstorm</h3>
+                                <p class="description">
+                                    Reunião de diferentes ideias e soluções para decidir qual problema o nosso
+                                    projeto se propõe a resolver.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">25 de Novembro</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Formulário de Pesquisa</h3>
+                                <p class="description">
+                                    Elaboração de um formulário de pesquisa no Google Forms como uma forma de pesquisa
+                                    para embasar o nosso projeto.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">29 de Novembro</span>
+                            <div class="timeline-content">
+                                <h3 class="title">2° Brainstorm</h3>
+                                <p class="description">
+                                    Brainstorm de um novo nome para o Projeto, pois a primeira
+                                    ideia já estava patenteada.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">Dezembro</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Construção do site</h3>
+                                <p class="description">
+                                    Início da construção de nosso site oficial.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">Janeiro</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Nosso primeiro Pitch</h3>
+                                <p class="description">
+                                    Apresentação do nosso projeto para o primeiro pitch do Recode Pro.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">Fevereiro</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Construção do Aplicativo</h3>
+                                <p class="description">
+                                    Reparos finais e construção do app.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">Março</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Entrega final</h3>
+                                <p class="description">
+                                    Tudo pronto!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- botao voltar ao topo -->
+
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+        data-abc="true"></a>
+
+    <!-- FOOTER-->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                    <div class="container">
+                        <a class="nav-link" href="./index.html"><img class="logobaixo" width="140em"
+                                src="../imagens/logo.png" alt="nosso logo"></a>
+                        <ul class="foote_bottom_ul_amrc">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./nossosservicos.html">Nossos serviços</a></li>
+                            <li><a href="./quemsomos.html">Quem somos</a></li>
+                            <li><a href="./contato.html">Contato</a></li>
+                        </ul>
+                        <ul class="social_footer_ul"> <!-- links -->
+                            <li><a href="https://github.com/JuliaRamos01/EtapasFinais_MaisBlack"><i class="fab fa-github"></i></a></li>
+                            <li><a href="www.instagram.com/eusoumaisblack/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fechamento footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- PARTE DE ÍCONES - FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/7d235f40dc.js" crossorigin="anonymous"></script>
+
+    <!-- código do script do chatbox -->
+    <script src="../Javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Código acessibilidade -->
+    <script>(function (d) {
+            var s = d.createElement("script"); s.setAttribute("data-account", "cfuyg20MEz"); s.
+                setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s);
+        })
+            (document)</script><noscript>Please ensure Javascript is enabled for purposes of <a
+            href="https://userway.org">website
+            accessibility</a></noscript>
+
+
+</body>
+
+</html>

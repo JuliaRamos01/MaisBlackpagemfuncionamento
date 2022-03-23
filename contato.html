@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- código css do css -->
+    <link rel="stylesheet" href="../CSS/contato.css">
+
+    <!-- CÓDIGO FONTE OPEN SANS BOLD 700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=PT+Sans:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- CÓDIGO FONTE Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=PT+Sans:wght@700&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+
+    <!-- CÓDIGO FONTE OPEN SANS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- título -->
+    <title>Contato</title>
+
+</head>
+
+<body>
+    <!-- PARTE DA NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#000000;">
+        <div class="container">
+            <a class="nav-link" href="./index.html"><img width="120em" src="../imagens/logo.png" alt="nosso logo"></a>
+            <!-- PARTE DA LOGO -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li><!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nossosservicos.html">Nossos serviços</a>
+                    </li><!-- Nossos serviços -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./quemsomos.html">Quem somos</a>
+                    </li><!-- Quem somos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contato.html">Contato</a>
+                    </li><!-- Contato -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CHATBOX -->
+    <div class="chat-box">
+        <div>
+            <div class="client">
+                <img src="../imagens/imgchatbox.png" alt="avatar" />
+                <div class="client-info">
+                    <h5>Tire aqui as suas dúvidas!</h5>
+                </div>
+            </div>
+
+            <div class="site-chat"><!-- chat -->
+                <label>Bem-vindo(a) ao nosso site! Aqui neste chat você pode tirar as suas dúvidas. Em que posso
+                    ajudar?
+                    Digite uma das opções abaixo:<br>
+                    <ul>
+                        <li>Cartão</li>
+                        <li>Cadastro</li>
+                        <li>Aplicativo</li>
+                        <li>Outra dúvida</li>
+                    </ul>
+                </label>
+            </div>
+
+            <div class="client-chat" id="escolhas-cartao">
+                <button onclick="exibeCartao()" id="escolha-cartao">Como conseguir o cartão?</button>
+                <button onclick="exibeOutra()" id="escolha-outra-cart">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-cartao">
+                <p>O cartão deve ser solicitado através do aplicativo e requer que seja feito o cadastro da
+                    conta previamente.</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="client-chat" id="escolhas-cadastro">
+                <button onclick="exibeCadastro()" id="escolha-cadastro">Como me cadastrar? </button>
+                <button onclick="exibeOutra()" id="escolha-outra-cad">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-cadastro">
+                <p>O cadastro deve ser realizado apenas pelo aplicativo. Não é possível realizá-lo pelo
+                    site.</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="client-chat" id="escolhas-app">
+                <button onclick="exibeApp()" id="escolha-app"> Onde posso encontrar o aplicativo? </button>
+                <button onclick="exibeOutra()" id="escolha-outra-app">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-app">
+                <p>Ele pode ser baixado através da loja de aplicativos do seu celular. Consulte a nossa página
+                    “Nossos serviços” e clique no botão “Baixe já” no fim da página, que você será redirecionado.
+                </p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="escolha-outra">
+                <p id="resp-outra">Você pode nos enviar um e-mail para tirar dúvidas de outros assuntos. Visite a
+                    nossa
+                    página de contato e nos mande a sua mensagem, retornaremos o mais breve possível!</p>
+            </div>
+
+            <div class="site-chat" id="erro">
+                <p>Não entendi. Por favor, digite uma opção válida</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Tentar novamente</button>
+            </div>
+
+            <div class="client-chat" id="duvidas2">
+                <button onclick="exibeCartao()" id="escolha-cartao2">Como conseguir o cartão?</button>
+                <button onclick="exibeCadastro()" id="escolha-cadastro2">Como me cadastrar? </button>
+                <button onclick="exibeApp()" id="escolha-app2"> Onde posso encontrar o aplicativo? </button>
+                <button onclick="exibeOutra()" id="escolha-outra2">Outro tipo de dúvida</button>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="campo" placeholder="Digite aqui..." />
+                <input id=enviar onclick="exibe()" type="submit" />
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-btn">
+        <i class="far fa-comment-dots"  onclick="changeIcon(this)"></i>
+    </div>
+
+    <!--Formulário-->
+    <div id='wrapper'>
+        <form action='' class='form'>
+            <p class='field required half'>
+                <input class='text-input' id='name' name='name' required type='text' placeholder="Digite seu nome">
+            </p>
+            <p class='field required half'>
+                <input class='text-input' id='email' name='email' required type='email' placeholder="E-mail">
+            </p>
+            <p class='field'>
+                <textarea class='textarea' cols='50' id='message' name='message' required rows='4'
+                    placeholder="Opa, digite aqui sua mensagem..."></textarea>
+            </p>
+            <p class='field'>
+                <input class='button' type='submit' value='Enviar'>
+            </p>
+        </form>
+    </div>
+
+
+    <!-- FOOTER-->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                    <div class="container">
+                        <a class="nav-link" href="./index.html"><img class="logobaixo" width="140em"
+                                src="../imagens/logo.png" alt="nosso logo"></a>
+                        <ul class="foote_bottom_ul_amrc">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./nossosservicos.html">Nossos serviços</a></li>
+                            <li><a href="./quemsomos.html">Quem somos</a></li>
+                            <li><a href="./contato.html">Contato</a></li>
+                        </ul>
+                        <ul class="social_footer_ul"> <!-- links -->
+                            <li><a href="https://github.com/JuliaRamos01/EtapasFinais_MaisBlack"><i class="fab fa-github"></i></a></li>
+                            <li><a href="www.instagram.com/eusoumaisblack/"><i class="fab fa-instagram"></i></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fechamento footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- PARTE DE ÍCONES - FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/7d235f40dc.js" crossorigin="anonymous"></script>
+
+    <!-- código do script do chatbox -->
+    <script src="../Javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Código acessibilidade -->
+    <script>(function (d) {
+            var s = d.createElement("script"); s.setAttribute("data-account", "cfuyg20MEz"); s.
+                setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s);
+        })
+            (document)</script><noscript>Please ensure Javascript is enabled for purposes of <a
+            href="https://userway.org">website
+            accessibility</a></noscript>
+
+</body>
+
+</html>

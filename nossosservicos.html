@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- código css do css -->
+    <link rel="stylesheet" href="../CSS/nossosservicos.css">
+
+    <!-- CÓDIGO FONTE OPEN SANS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- CÓDIGO FONTE OPEN SANS BOLD 700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=PT+Sans:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- CÓDIGO FONTE Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@700&family=PT+Sans:wght@700&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- CÓDIGO FONTE PT SANS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CÓDIGO FONTE LORA -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+
+
+    <!-- título -->
+    <title>Nossos Serviços</title>
+
+</head>
+
+<body>
+
+    <!-- PARTE DA NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#000000;">
+        <div class="container">
+            <a class="nav-link" href="./index.html"><img width="120em" src="../imagens/logo.png" alt="nosso logo"></a>
+            <!-- PARTE DA LOGO -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li><!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nossosservicos.html">Nossos serviços</a>
+                    </li><!-- Nossos serviços -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./quemsomos.html">Quem somos</a>
+                    </li><!-- Quem somos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contato.html">Contato</a>
+                    </li><!-- Contato -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CHATBOX -->
+    <div class="chat-box">
+        <div>
+            <div class="client">
+                <img src="../imagens/imgchatbox.png" alt="avatar" />
+                <div class="client-info">
+                    <h5>Tire aqui as suas dúvidas!</h5>
+                </div>
+            </div>
+
+            <div class="site-chat"><!-- chat -->
+                <label>Bem-vindo(a) ao nosso site! Aqui neste chat você pode tirar as suas dúvidas. Em que posso
+                    ajudar?
+                    Digite uma das opções abaixo:<br>
+                    <ul>
+                        <li>Cartão</li>
+                        <li>Cadastro</li>
+                        <li>Aplicativo</li>
+                        <li>Outra dúvida</li>
+                    </ul>
+                </label>
+            </div>
+
+            <div class="client-chat" id="escolhas-cartao">
+                <button onclick="exibeCartao()" id="escolha-cartao">Como conseguir o cartão?</button>
+                <button onclick="exibeOutra()" id="escolha-outra-cart">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-cartao">
+                <p>O cartão deve ser solicitado através do aplicativo e requer que seja feito o cadastro da
+                    conta previamente.</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="client-chat" id="escolhas-cadastro">
+                <button onclick="exibeCadastro()" id="escolha-cadastro">Como me cadastrar? </button>
+                <button onclick="exibeOutra()" id="escolha-outra-cad">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-cadastro">
+                <p>O cadastro deve ser realizado apenas pelo aplicativo. Não é possível realizá-lo pelo
+                    site.</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="client-chat" id="escolhas-app">
+                <button onclick="exibeApp()" id="escolha-app"> Onde posso encontrar o aplicativo? </button>
+                <button onclick="exibeOutra()" id="escolha-outra-app">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="resp-app">
+                <p>Ele pode ser baixado através da loja de aplicativos do seu celular. Consulte a nossa página
+                    “Nossos serviços” e clique no botão “Baixe já” no fim da página, que você será redirecionado.
+                </p>
+                <button onclick="outraDuvida()" class="outra-duvida">Outra dúvida</button>
+            </div>
+
+            <div class="site-chat" id="escolha-outra">
+                <p id="resp-outra">Você pode nos enviar um e-mail para tirar dúvidas de outros assuntos. Visite a
+                    nossa
+                    página de contato e nos mande a sua mensagem, retornaremos o mais breve possível!</p>
+            </div>
+
+            <div class="site-chat" id="erro">
+                <p>Não entendi. Por favor, digite uma opção válida</p>
+                <button onclick="outraDuvida()" class="outra-duvida">Tentar novamente</button>
+            </div>
+
+            <div class="client-chat" id="duvidas2">
+                <button onclick="exibeCartao()" id="escolha-cartao2">Como conseguir o cartão?</button>
+                <button onclick="exibeCadastro()" id="escolha-cadastro2">Como me cadastrar? </button>
+                <button onclick="exibeApp()" id="escolha-app2"> Onde posso encontrar o aplicativo? </button>
+                <button onclick="exibeOutra()" id="escolha-outra2">Outro tipo de dúvida</button>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="campo" placeholder="Digite aqui..." />
+                <input id=enviar onclick="exibe()" type="submit" />
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-btn">
+        <i class="far fa-comment-dots"  onclick="changeIcon(this)"></i>
+    </div>
+
+
+    <!-- Parte de cabeçalho -->
+    <header class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark" style="min-height: 100vh; background-size: cover;">
+        <div class="container">
+            <div class="row align-items-center d-flex justify-content-between">
+                <div class="col-12 col-md-6 pb-5 order-2 order-sm-2 ">
+                    <h1 class=" text-white mb-3 mt-5 display-3">Pronto para ser um <span
+                            style="color:#000000;">+Black?</span></h1>
+                    <p>Conheça um pouco mais sobre <br> o que oferecemos a você.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PARTE EXPLICATIVA -->
+
+    <div class="exp-section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 how-img">
+                    <img class="img-fluid" src="../imagens/ilustracao4.png" alt="" />
+                </div>
+                <div class="col-md-6">
+                    <h4>Nosso objetivo principal <br> é ajudar pessoas. </h4>
+                    <h4 class="subheading"> E se todos tivessem oportunidades iguais?
+                    </h4>
+                    <p>Através de nossos serviços, visamos construir uma sociedade
+                        mais igualitária, em que pessoas negras possam desfrutar do sucesso de suas jornadas!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- parte das box -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2>Ok, mas como isso será feito?</h2>
+                        <p>Através de nosso aplicativo, oferecemos serviços para que
+                            você<br> tenha todo o suporte necessário para sua jornada empreendedora!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- box 1 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="fa fa-desktop"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Carteira virtual</h5>
+                            <p>Através do app para o celular, você pode controlar e gerenciar suas finanças.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+
+                <!-- box 2 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Indicações</h5>
+                            <p>Indique negócios de empreendedores negros para fortalecer a comunidade e ganhe pontos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+
+                <!-- box 3 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="fa fa-comment"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Educação Financeira</h5>
+                            <p>Receba dicas de como melhorar a sua vida financeira.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+
+                <!-- box 4 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="fa fa-image"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Parcerias</h5>
+                            <p>O +Black visa fazer parcerias com diversas empresas ligadas ao público negro, a fim de
+                                promover melhores serviços.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+
+                <!-- box 5 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="fa fa-th"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Eventos exclusivos</h5>
+                            <p>Ao ser cliente, você terá acesso a eventos importantes e exclusivos,
+                                tais como oficinas, palestras e workshops.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+
+                <!-- box 6 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="fa fa-cog"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h5>Acessibilidade</h5>
+                            <p>Nosso trabalho visa ser o mais simples e acessível possível.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / -->
+            </div>
+        </div>
+    </section> <!-- fim das box -->
+
+    <!-- parte explicação passo a passo -->
+    <section class="py-5 text-center">
+        <div class="container">
+          <h1 class="text-center">Como posso ser um +Black?</h1>
+          <h2 class="text mb-5 text-center"> Para ser um cliente, basta seguir as seguintes 
+              etapas:
+          </h2>
+    
+          <div class="row">
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-1" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 16v-8l-2 2"></path>
+                    <circle cx="12" cy="12" r="9"></circle>
+                 </svg>
+              <h6>Baixe o aplicativo</h6>
+              <p class="text">Baixe o aplicativo +Black para o seu celular.</p>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-2" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M10 10a2 2 0 1 1 4 0c0 .591 -.417 1.318 -.816 1.858l-3.184 4.143l4 0"></path>
+                    <circle cx="12" cy="12" r="9"></circle>
+                 </svg>
+              <h6>Realize seu cadastro</h6>
+              <p class="text">Siga as etapas de cadastro solicitadas pelo aplicativo.
+              </p>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-3" width="50" height="50" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 12a2 2 0 1 0 -2 -2"></path>
+                    <path d="M10 14a2 2 0 1 0 2 -2"></path>
+                    <circle cx="12" cy="12" r="9"></circle>
+                 </svg>
+              <h6>Pronto!</h6>
+              <p class="text"> Você terá a sua conta realizada com sucesso e poderá utilizá-la
+                  normalmente após a verificação em nosso sistema de cadastro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+    <!-- Parte CTA -->
+
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="../imagens/cartaopreto.png"
+                    alt="..." />
+            </div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-bold">Pronto para embarcar nessa jornada?</h1>
+                <p>Baixe o app para o seu smartphone e garanta já a sua conta!</p>
+                <a class="btn" href="FAZERRRR">Baixe já!</a>
+            </div>
+        </div>
+    </div><!-- Parte CTA -->
+
+    <!-- botao voltar ao topo -->
+
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+        data-abc="true"></a>
+
+
+    <!-- FOOTER-->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                    <div class="container">
+                        <a class="nav-link" href="./index.html"><img class="logobaixo" width="140em"
+                                src="../imagens/logo.png" alt="nosso logo"></a>
+                        <ul class="foote_bottom_ul_amrc">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./nossosservicos.html">Nossos serviços</a></li>
+                            <li><a href="./quemsomos.html">Quem somos</a></li>
+                            <li><a href="./contato.html">Contato</a></li>
+                        </ul>
+                        <ul class="social_footer_ul"> <!-- links -->
+                            <li><a href="https://github.com/JuliaRamos01/EtapasFinais_MaisBlack"><i class="fab fa-github"></i></a></li>
+                            <li><a href="www.instagram.com/eusoumaisblack/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fechamento footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- PARTE DE ÍCONES - FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/7d235f40dc.js" crossorigin="anonymous"></script>
+
+    <!-- código do script do chatbox -->
+    <script src="../Javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Código acessibilidade -->
+    <script>(function (d) {
+            var s = d.createElement("script"); s.setAttribute("data-account", "cfuyg20MEz"); s.
+                setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s);
+        })
+            (document)</script><noscript>Please ensure Javascript is enabled for purposes of <a
+            href="https://userway.org">website
+            accessibility</a></noscript>
+
+</body>
+
+</html>
